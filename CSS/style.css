@@ -123,9 +123,12 @@ select[multiple] {
     min-height: 150px;
 }
 
+#mainContentArea{
+	-webkit-box-shadow: 3px 3px 8px 1px #C2C2C2; 
+	box-shadow: 3px 3px 8px 1px #C2C2C2;
+}
 /** Making placeholders a little darker and italic **/
 input::-webkit-input-placeholder {
-	/* Safari and Chrome */
     color: #444;
     font-style:italic;
     opacity: 0.9;
@@ -348,9 +351,11 @@ fieldset > legend{
 
 .itemContainer{
 	border: 1px solid rgba(0, 0, 0, 0.95);
-	border-top: thick solid rgba(0, 0, 0, 0.95);
+	border-top: thick solid rgba(0, 0, 0, 0.70);
 	padding:15px;
 	border-radius: 25px;
+	-webkit-box-shadow: 3px 3px 8px 1px #C2C2C2; 
+	box-shadow: 3px 3px 8px 1px #C2C2C2;
 }
 
 .itemContainer > h2{
@@ -371,6 +376,8 @@ fieldset > legend{
 .card{
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
+	-webkit-box-shadow: 3px 3px 8px 1px #C2C2C2; 
+	box-shadow: 3px 3px 8px 1px #C2C2C2;
 }
 
 /********************************* BORDER *******************************************************************/
