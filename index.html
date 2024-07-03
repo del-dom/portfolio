@@ -1,1 +1,260 @@
-<div>hello world</div>
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Foundation Starter Template</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css" >
+		
+
+		<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+		
+		<script>
+			$(document).foundation();
+		</script>
+	</head>
+	<body>
+
+		<header class="full bgtop">
+			<div class="grid-container">
+				<div class="grid-x ">
+					<div class='small-12 cell hide-for-print'>
+						<a id="skipToContent" href="#mainContentArea">Skip To Content</a>
+						<div class="grid-x menu">
+							<div class="cell small-12 medium-9"><h1 class="text-white">Dominick Del Azodi</h1></div>
+							<!--<div class="cell small-12 medium-1"><a class="text-white text-biggest hoverBeige hoverUnderline" href="about.html">About</a></div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="full bgWhite paddingTop1">
+			<main class="grid-container lightFullBorder bgWhite roundedCorners25" id="mainContentArea">
+				<div class="grid-x grid-margin-y">
+					<p>
+						Welcome to my quick portfolio website. This page gives a brief overview of the projects I have been working on. 
+						While I have tried to give examples of my work here not all of my work is publicly accessible. Some other minor personal projects 
+						are also available for perusal on my github.
+					</p>
+
+					<div class="itemContainer cell small-12">
+						<h2>Michigan State University (MSU) College of Agriculture and Natural Resources (CANR)- Enterprise Systems Programing (ESP) application shell</h2>
+						<p>
+							As you scroll through my professional portfolio you will notice a very similar design across all of the applications
+							I have worked on at MSU CANR ESP. This similarity is due to a project I led in 2019 to build a application shell, framework
+							and design language to be used across our portfolio to maintain a level of brand cohesion not only with the university style guides
+							but also with the college and unit styles in addition to our own teams styling needs.
+						</p>
+						<p>
+							This framework application manages the standard application needs like authentication and user management. It also works as the starting
+							point for our applications so it instills that design language across not only our code base but also our brand identity. We do have 
+							flexibility with our clients to deviate from the standard design but most choose to stay relatively close to our standard UI.
+						</p>
+					</div>
+
+					<div class="itemContainer cell small-12">
+						<h2><a href="https://events.anr.msu.edu/">CANR Events Management System (CANR EMS)</a></h2>
+						<p>
+							This is the largest system to date that I have worked on. It has been in operation since 2013. Its annual revenue is around 3 million dollars
+							and it annually facilitates nearly 80,000 Michigan residents attending programs and trainings offered by the Michigan State University Extension office.
+							A core component of this system is the dynamic forms engine. The forms engine allows a wide variety of data to be collected across over 250 
+							different fields and types. 
+						</p>
+						<p>
+							I began working on CANR EMS in 2016. During my time working on it I have led the effort to implement version control for the system and the team. 
+							I also led and heavily contributed to the effort to redesign the user interface. In addition to redesigning the core structure of the interfaces
+							I also consulted with our primary clients to design a series of themes for them so that the theme of their registration more accurately aligns 
+							with the theme of their event.
+						</p>
+						<p>
+							Beyond UX, UI and user facing operations I have also built and improved many report generators that support the business side of the operation
+							and their abilities to make informed and strategic decisions.
+						</p>
+						<ul class="no-bullet">
+							<li><a href="https://events.anr.msu.edu/">Link to ANR EMS home page</a></li>
+							<li><a href="https://events.anr.msu.edu/Adulting2024/">Link to public event registration active until of November 2024</a></li>
+						</ul>
+						<div class="grid-x grid-margin-y grid-margin-x">
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Home Page
+								</div>
+								<img src="images/EMS/landingPage.png" alt="ANR EMS homepage">
+								<div class="card-section">
+									<p>The home page of ANR EMS
+									</p>
+								</div>
+								</div>
+							<div class="card cell small-12 medium-6" >
+								<div class="card-divider">
+									Event Dashboard
+								</div>
+								<img src="images/EMS/eventDashboard.png" alt="ANR EMS dashboard with all option for managing events">
+								<div class="card-section">
+									<p>This page is the hub for accessing all possible things that need to be done to create, open, manage and close an event.
+										It also gives some summary statistics and important information about the event like the start and end dates.
+									</p>
+								</div>
+							</div>
+							<div class="card cell small-12 medium-6" >
+								<div class="card-divider">
+									Example registration
+								</div>
+								<img src="images/EMS/exampleRegistrationPage.png" alt="example registration page with banner, theme and form fields">
+								<div class="card-section">
+									<p>This is an example of a registration page including theme, banner images and full customizable form fields..
+									</p>
+								</div>
+								</div>
+
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Custom Report Builder
+								</div>
+								<img src="images/EMS/customReportConfig.png" alt="custom report page for creating a excel reports">
+								<div class="card-section">
+									<p>This report allows the event manager to output the exact data they need as an excel document. It also totals and subtotals all of the 
+										registration information for the selected fields.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="itemContainer cell small-12">
+						<h2><a href="https://competingforgreeen.agbioresearch.msu.edu/">Competing For Green</a></h2>
+						<p>Another application I worked on at MSU to facilitate the application, review and allotment of grant money.
+						</p>
+						<ul class="no-bullet">
+							<li><a href="https://competingforgreeen.agbioresearch.msu.edu/">Link to Competing for Green home page</a></li>
+						</ul>
+
+						<div class="grid-x grid-margin-y grid-margin-x">
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Home Page.
+								</div>
+								<img src="images/c4g/landingPage.png" alt="competing for green homepage">
+								<div class="card-section">
+									<p>The home page of competing for green
+									</p>
+								</div>
+							</div>
+
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Managing reviewers.
+								</div>
+								<img src="images/c4g/manageReviewers.png" alt="Page for filtering, assigning and managing reviewers">
+								<div class="card-section">
+									<p>Subject matter experts are assigned as reviewers to grant applications. This page helps filter and match 
+										experts to appropriate applications.
+									</p>
+								</div>
+							</div>
+
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									System wide reports
+								</div>
+								<img src="images/c4g/systemReports.png" alt="overview of system wide reports">
+								<div class="card-section">
+									<p>A listing of reports available in the system for the use of the system manager or reviewers in the decision
+										making process
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="itemContainer cell small-12">
+						<h2><a href="https://reservations.pkg.msu.edu/">Packaging Reservations</a></h2>
+						<p>Application to facilitate the reservation and assignment of shared equipment within the school of packaging.
+						</p>
+						<ul class="no-bullet">
+							<li><a href="https://reservations.pkg.msu.edu/">Link to Packaging Reservations home page</a></li>
+						</ul>
+
+						<div class="grid-x grid-margin-y grid-margin-x">
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Reservation Calendar
+								</div>
+								<img src="images/reservations/calendar.png" alt="reservations calendar">
+								<div class="card-section">
+									<p>
+										Display calendar for reservation of instruments or time blocking for classes that 
+										are a collection of instruments.
+									</p>
+								</div>
+							</div>
+
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Auto documentation engine
+								</div>
+								<img src="images/reservations/auto-documentation.png" alt="image of the auto documentation engine">
+								<div class="card-section">
+									<p>A system a built to automatically convert code comments and change log into a formatted webpage to help
+										other team members sift through documentation.
+									</p>
+								</div>
+							</div>
+
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Configure Classes
+								</div>
+								<img src="images/reservations/configureClasses.png" alt="overview of system wide reports">
+								<div class="card-section">
+									<p>Page to configure a relationship between classes and the instruments they need.
+									</p>
+								</div>
+							</div>
+							<div class="card cell small-12 medium-6">
+								<div class="card-divider">
+									Error log
+								</div>
+								<img src="images/reservations/errorLog.png" alt="overview of system wide reports">
+								<div class="card-section">
+									<p>Shows the time and information for non-exception causing errors. Things like failed logins don't raise an exception but we 
+										do monitor them to see if there is a pattern of behavior or potential network issue.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<div class="full bgDarkGray pageFooter">
+			<footer class="grid-container full hide-for-print paddingLeft0 paddingRight0">
+				<div class="grid-x bgOlive full hide" id="footer-social">
+				</div>
+				<div class="grid-container full bgDarkGray topBorder paddingTop1">
+					<div class="grid-x grid-margin-x  paddingBottom1">
+						<div class="cell small-12 medium-7 small-offset-2">
+							<a href="mailto:delponte.domi@gmail.com" class="text-bigger text-white" >delponte.domi@gmail.com</a>
+						</div>
+						<div class="cell small-12 medium-3 social">
+							<a class="github" href="https://github.com/del-dom" target="_blank"><img src="images/github.png" alt=""></a>
+							<a class="linkedin" href="https://www.linkedin.com/in/alex-popp-60b272a7/" target="_blank"><img src="images/linkedin.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script src="js/sticky-footer.js" ></script>
+</html>
+
+
+
+	
+		
+	

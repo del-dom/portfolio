@@ -1,0 +1,1306 @@
+/********************* Table of Contents ****************************************************************************/
+
+/*
+Line  36:  Introduction;
+Line ~27:  Global Styles;
+Line ~88:  Overriding foundation;
+Line ~115: Header and Nav Styles;
+Line ~156: Foundation-icons styling;
+Line ~176: Sizing, fieldset, border, floats, tables
+Line ~230: Classes for spacing;
+Line ~373: CABS approved colors;
+Line ~440: Typography and text-colors;
+Line ~540: Footer stuff taken from Cabs template;
+Line ~693: Styling Timepicker;
+Line ~765: Media Queries at Foundation BreakPoints;
+
+/******************* Introduction *******************************************************************************************/
+/*
+
+Before using this style sheet, please familiarize yourself with foundation framework,
+CABS branding guidelines, and CABS web-standards.
+
+Everything in here is built to match the branding standards as close as possible,
+leverage foundation framework and follow web development best practices whenever possible.
+
+It is recommended that each application has its own style.css file for application specific styles.
+
+If you need breakpoints on elements specific to your application please copy the media queries
+at the bottom into your application specific css file
+
+
+Resources:
+CSS Gradient builder: https://www.cssmatic.com/gradient-generator#';
+Foundation Icons: https://zurb.com/playground/foundation-icon-fonts-3;
+Foundation Docs: https://foundation.zurb.com;
+Media Queries: https://youtu.be/2KL-z9A56SQ?t=35s
+/*********************  GLOBAL STYLES **************************************************************************************/
+
+/* This is to help control the size of all text on the system */
+/* Here is a post about how REM works and why downsizing the font-size by 10%
+/* on the html element decreases the size of the text 
+/* in most browsers by default 1rem = 16px
+/*  https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97 */
+
+html{
+	font-size: 90% 
+}
+/* adjust grid-container to be the same size as if html font-size=100% to make dataTables JS work correctly */
+.grid-container{
+	max-width:88.75rem;
+}
+
+main{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3vh;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	padding-bottom: 1vh;
+
+}
+
+body{
+	font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	overflow-x: hidden;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(240, 6, 6, 0) 100%) no-repeat;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(247, 3, 3, 0) 100%);
+
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica,Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1{
+	font-size: 2.5rem
+}
+h2{
+	font-size: 2.125rem
+}
+h3{
+	font-size: 1.75rem
+}
+h4{
+	font-size: 1.375rem
+}
+h5{
+	font-size: 1rem;
+	font-weight:bold;
+}
+h6{
+	font-size: 1rem
+}
+
+kbd {  
+	border-radius: 0.25rem;
+	border: 1px solid rgba(112,111,112);
+	box-shadow: 0 2px 0 1px rgba(112,111,112,0.5);
+	cursor: default;
+	font-size: 0.75em;
+	line-height: 1;
+	min-width: 0.75rem;
+	padding: 2px 5px;
+	position: relative;
+	top: -1px;
+}
+
+kbd:hover {
+		box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+		top: 1px;
+	}
+  
+
+textarea{
+	min-height:125px;
+}
+
+select[multiple] {
+    min-height: 150px;
+}
+
+/** Making placeholders a little darker and italic **/
+input::-webkit-input-placeholder {
+	/* Safari and Chrome */
+    color: #444;
+    font-style:italic;
+    opacity: 0.9;
+}
+input:-moz-placeholder {
+    /* FF 4-18 */
+    color: #444;
+    font-style:italic;
+    opacity: 0.9;
+}
+input::-moz-placeholder {
+    /* FF 19+ */
+    color: #444;
+    font-style:italic;
+    opacity: 0.9;
+}
+input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #444;
+    font-style:italic;
+    opacity: 0.9;
+}
+
+.button{
+	margin:0.25rem;
+	margin-bottom:1rem;
+}
+
+button{
+	margin:0.25rem;
+	margin-bottom:1rem;
+}
+
+label{
+	font-size: 1rem;
+}
+
+label > span.text-red{
+	padding-right: 0.25rem;
+}
+/********************************* Overriding foundation ******************************************************/
+
+.dropdown.menu .is-active > a {
+  background: transparent;
+  color: #FFF; }
+
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+	border-color: #FFF transparent transparent;
+}
+
+.close-button:focus, .close-button:hover {
+	color: #fff;
+}
+
+a{
+	color: #18453b;
+	text-decoration: underline;
+}
+
+.button{
+	text-decoration: none
+}
+
+.input-group-label{
+	background-color: none;
+}
+
+hr{
+	border-bottom: 1px solid #97A2A2;
+}
+
+.tabs-title{
+	border-right: 1px solid #97A2A2;
+}
+.tabs-title > a:hover {
+	background: #535054;
+}
+.tabs-title > a:focus{
+	background: #535054;
+}
+
+.tabs-title > a[aria-selected='true'] {
+	background: #535054;
+}
+
+.accordion-item > a[aria-expanded='true']{
+	background-color: #535054;
+}
+
+.accordion-title:hover{
+   background-color: #535054;
+}
+
+.accordion-title:focus{
+	background-color:#18453B;
+}
+
+.form-error{
+	color:#B30000;
+	margin-top: -.85rem;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+    font-weight: 600;
+    display: block;
+
+}
+
+/******************************* HEADER AND NAV SPECIFIC STYLES *********************************************************/
+
+#skipToContent{
+	color:rgba(0, 0, 0, 0);
+}
+
+#skipToContent:focus{
+	color:#000;
+}
+
+.site-header{
+	font-size: 1.3125rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 1.2;
+	margin: 2px 0 17px;
+	color:#18453B;
+	text-decoration: none
+}
+
+.offCanvasMenu{
+	z-index:1000;
+}
+
+
+/*CSS Gradient builder: https://www.cssmatic.com/gradient-generator#';*/
+.lightGreenGradient{
+	background: linear-gradient(to bottom, rgba(203,212,210,0.94) 0%, rgba(255,255,255,0.72) 23%, rgba(255,255,255,0) 100%) no-repeat;
+	background-image: linear-gradient(rgba(203, 212, 210, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(255, 255, 255, 0) 100%);
+}
+
+.greenGradient{
+	background: linear-gradient(to bottom, rgba(24,69,59,0.94) 0%, rgba(255,255,255,0.72) 12%, rgba(255,255,255,0) 100%) no-repeat;
+	background-image: linear-gradient(rgba(24,69,59,0.94) 0%, rgba(255, 255, 255, 0.72) 12%, rgba(255, 255, 255, 0) 100%);
+}
+
+.lightGrayGradient{
+	background: linear-gradient(to bottom, rgba(153,162,162,0.94) 0%, rgba(255,255,255,0.72) 23%, rgba(255,255,255,0) 100%) no-repeat;
+	background-image: linear-gradient(rgba(153,162,162,0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(255, 255, 255, 0) 100%);
+}
+
+.grayGradient{
+	background: linear-gradient(to bottom, rgba(83,80,84,0.94) 0%, rgba(255,255,255,0.72) 10%, rgba(255,255,255,0) 100%) no-repeat;
+	background-image: linear-gradient(rgba(83,80,84,0.94) 0%, rgba(255, 255, 255, 0.72) 10%, rgba(255, 255, 255, 0) 100%);
+}
+/********************************* Foundation-icons styling ***************************************************/
+.extra-small-icon{
+	font-size: 15px;
+}
+
+.small-icon{
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+.medium-icon{
+	font-size: 35px;
+	padding: 0 5px;
+}
+
+.large-icon{
+	font-size: 50px;
+	line-height: 50px;
+}
+.mobile-menu-icon{
+	background-image: url("/images/menu-icon.svg");
+	background-repeat: no-repeat;
+	width: 43px;
+    height: 41px;
+}
+
+/******************************** Sizing **************************************************************/
+
+.XL-textarea{
+	min-height:500px;
+}
+
+/******************************************* Field Set Styles ****************************************/
+
+/**/
+/* Styling for fieldset legend and fieldset top border */
+fieldset{
+	border: 1px solid #97A2A2;
+	border-top: thick solid #18453b;
+	padding:15px;
+	border-radius: 25px;
+}
+
+fieldset > legend{
+	color: #18453b;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 6px;
+}
+
+.unstyledFieldset{
+    border: none;
+    border-top: none;
+    padding:0px;
+}
+
+.unstyledFieldset > legend{
+	color: #000;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0px;
+}
+
+/**********************************************Item Container************************************************/
+
+
+
+.itemContainer{
+	border: 1px solid rgba(0, 0, 0, 0.95);
+	border-top: thick solid rgba(0, 0, 0, 0.95);
+	padding:15px;
+	border-radius: 25px;
+}
+
+.itemContainer > h2{
+	color: rgba(0, 0, 0, 1);
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 6px;
+}
+
+.card-divider{
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-top: thick solid rgba(0, 0, 0, 0.5);
+	padding:15px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+.card{
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+/********************************* BORDER *******************************************************************/
+
+.fullBorder{
+	border: 1px solid #535054;
+}
+
+.lightFullBorder{
+	border: 1px solid #97A2A2;
+}
+
+.topBorder{
+	border-top: 1px solid #535054;
+}
+
+.bottomBorder{
+	border-bottom: 1px solid #535054;
+}
+
+.borderRight{
+	border-right: 1px solid #535054;
+}
+
+.borderLeft{
+	border-left: 1px solid #535054;
+}
+
+.noBorder{
+	border: 0px solid #535054;
+}
+
+.roundedCorners25 {
+    border-radius: 25px;
+}
+
+/********************************* Floating *****************************************************************/
+
+.floatRight{
+	float:right;
+}
+.floatLeft{
+	float:left;
+}
+
+
+/********************************* Table  *******************************************************************/
+
+table thead{
+	background-color: #18453B;
+	border: 1px solid #000;
+}
+
+table thead th{
+	color:#fff;
+	text-align:center;
+	border-right: 1px solid #fff;
+}
+
+table tbody{
+	border: 1px solid #000;
+}
+
+table tfoot{
+	border: 1px solid #000;
+}
+
+table caption{
+	font-size: 1.2rem;
+}
+
+
+table {
+    empty-cells: show;
+    border: 1px solid #000;
+}
+
+
+/********************************* SPACING ******************************************************************/
+
+/*********** MARGINS *************/
+.marginTopNeg5{
+	margin-top:-5px !important;
+}
+
+.marginTop0{
+	margin-top:0rem !important;
+}
+
+.marginTop1{
+	margin-top:1rem !important;
+}
+
+.marginTop2{
+	margin-top:2rem !important;
+}
+
+.marginTop3{
+	margin-top:3rem !important;
+}
+
+.marginBottom0{
+	margin-bottom:0px !important;
+}
+
+.marginBottom1{
+	margin-bottom:1rem !important;
+}
+
+.marginBottom2{
+	margin-bottom:2rem !important;
+}
+
+.marginBottom3{
+	margin-bottom:3rem !important;
+}
+
+.marginRight0{
+	margin-right:0px !important;
+}
+
+.marginRight1{
+	margin-right:1rem !important;
+}
+
+.marginRight2{
+	margin-right:2rem !important;
+}
+
+.marginRight3{
+	margin-right:3rem !important;
+}
+
+.marginLeft0{
+	margin-left:0px !important;
+}
+
+.marginLeft1{
+	margin-left:1rem !important;
+}
+
+.marginLeft2{
+	margin-left:2rem !important;
+}
+
+.marginLeft3{
+	margin-left:3rem !important;
+}
+
+/***** PADDING ******/
+
+.paddingTop0{
+	padding-top:0rem !important;
+}
+
+.paddingTop-half{
+	padding-top:0.5rem !important;
+}
+
+.paddingTop1{
+	padding-top:1rem !important;
+}
+
+.paddingTop2{
+	padding-top:2rem !important;
+}
+
+.paddingTop3{
+	padding-top:3rem !important;
+}
+
+.paddingBottom0{
+	padding-bottom:0rem !important;
+}
+
+.paddingBottom-half{
+	padding-bottom:0.5rem !important;
+}
+
+.paddingBottom1{
+	padding-bottom:1rem !important;
+}
+
+.paddingBottom15{
+	padding-bottom:1.5rem !important;
+}
+
+.paddingBottom2{
+	padding-bottom:2rem !important;
+}
+
+.paddingBottom3{
+	padding-bottom:3rem !important;
+}
+
+.paddingLeft0{
+	padding-left:0px !important;
+}
+
+.paddingLeft-half{
+	padding-left:0.5rem !important;
+}
+
+.paddingLeft1{
+	padding-left:1rem !important;
+}
+
+.paddingLeft2{
+	padding-left:2rem !important;
+}
+
+.paddingLeft3{
+	padding-left:3rem !important;
+}
+
+.paddingRight0{
+	padding-right:0px !important;
+}
+
+.paddingRight-half{
+	padding-right:0.5rem !important;
+}
+
+.paddingRight1{
+	padding-right:1rem !important;
+}
+
+.paddingRight2{
+	padding-right:2rem !important;
+}
+
+.paddingRight3{
+	padding-right:3rem !important;
+}
+
+
+
+/********************************* Colors *******************************************************************/
+/*** Colors taken from MSU design and visual identity recommendation
+https://brand.msu.edu/design-visual/
+***/
+
+.bgGreen {
+	background-color: #18453B !important;
+}
+
+.bgBrightGreen{
+	background-color:#0DB14B !important;
+}
+
+.bgBrightOrange{
+	background-color:#F98521 !important;
+}
+
+.bgTeal{
+	background-color:#008183 !important;
+}
+
+.bgOlive{
+	background-color:#94AE4A !important;
+}
+
+.bgYellow {
+	background-color: #D1DE3F !important;
+}
+
+.bgBeige{
+	background-color:#E8D0B5 !important;
+}
+
+.bgSand{
+	background-color:#C89A58 !important;
+}
+
+.bgGray {
+	background-color: #97A2A2 !important;
+}
+
+.bgOrange {
+	background-color: #CB5A28 !important;
+}
+
+.bgDarkGray {
+	background-color: #535054 !important;
+}
+
+.bgWhite {
+	background-color:#FFF !important;
+}
+
+.bgBlue{
+	background-color: #909ab7 !important;
+}
+
+.bgMagenta {
+	background-color: #6E005F !important;
+}
+
+.bgBlack {
+	background-color: black !important;
+}
+
+/****** Colors from Nat Sci palete ********/
+
+.bgLightCyanBlue {
+	background-color: #94AABF !important;
+}
+.bgCyanBlue {
+	background-color: #5885A4 !important;
+}
+.bgPastelGreen {
+	background-color: #CCDFB2 !important;
+}
+.bgPastelCyan {
+	background-color: #C1E6EE !important;
+}
+.bgSlate {
+	background-color: #676863 !important;
+}
+.bgMediumCyan {
+	background-color: #95B7B9 !important;
+}
+.bgLightGreenCyan {
+	background-color: #cedbd4 !important;
+}
+.bgForestGreen {
+	background-color: #548555 !important;
+}
+.bgTan {
+	background-color: #E6DBC7 !important;
+}
+.bgPastelPurple {
+	background-color: #65658B !important;
+}
+.bgPastelOrange {
+	background-color: #DE946F !important;
+}
+.bgDenim {
+	background-color: #526F81 !important;
+}
+.bgMaize {
+	background-color: #EABE5D !important;
+}
+.bgDrabGreen {
+	background-color: #6E8E6D !important;
+}
+.bgBleachedParchment {
+	background-color: #C7B79D !important;
+}
+.bgRedCedar {
+	background-color: #DA7A7B !important;
+}
+.bgPalmGreen{
+	background-color: #567D6D !important;
+}
+.bgGreenGrape {
+	background-color: #BFC77C !important;
+}
+.bgLilac {
+	background-color: #B0B6D6 !important;
+}
+.bgDarkBlueGray {
+	background-color: #2C3D4D !important;
+}
+
+
+
+/***** Hover & Focus *****/
+.hoverBgDarkGray:hover,
+.hoverBgDarkGray:focus{
+	background-color: #535054 !important;
+}
+
+.hoverBgGray:hover,
+.hoverBgGray:focus{
+	background-color: #97A2A2 !important;
+}
+
+.hoverBgGreen:hover,
+.hoverBgGreen:focus{
+	background-color: #18453B !important;
+}
+
+.hoverBgWhite:hover,
+.hoverBgWhite:focus{
+	background-color: #FFF !important;
+}
+
+.hoverBgBlack:hover,
+.hoverBgBlack:focus{
+	background-color: #000 !important;
+}
+
+
+
+
+
+/********************************* Typography *****************************************************************/
+
+
+.hoverUnderline:hover,
+.hoverUnderline:focus{
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+.hoverExpand:hover{
+	transform: scale(1.15);
+	cursor:pointer;
+}
+
+.hoverExpandBig:hover{
+	transform: scale(1.5);
+	cursor:pointer;
+}
+
+.text-smallest{
+	font-size: 0.6rem;
+}
+
+.text-smaller{
+	font-size: 0.7rem;
+}
+
+.text-small{
+	font-size: 0.8rem;
+}
+
+.text-big{
+	font-size: 1.1rem;
+}
+
+.text-bigger{
+	font-size: 1.3rem;
+}
+
+.text-biggest{
+	font-size: 1.7rem;
+}
+
+.breakAll{
+	word-break:break-all;
+}
+
+
+/*********Text Colors ***********/
+.text-white {
+	color:#FFF !important;
+}
+
+.text-green{
+	color: #18453B !important;
+}
+
+.text-brightGreen{
+	color:#0DB14B !important;
+}
+
+.text-orange{
+	color: #CB5A28 !important;
+}
+
+.text-brightOrange{
+	color:#F98521 !important;
+}
+
+.text-blue{
+	color: #909ab7 !important;
+}
+
+.text-teal{
+	color:#008183 !important;
+}
+
+.text-olive{
+	color:#94AE4A !important;
+}
+
+.text-yellow{
+	color: #D1DE3F !important;
+}
+
+.text-beige{
+	color:#E8D0B5 !important;
+}
+
+.text-sand{
+	color:#C89A58 !important;
+}
+
+.text-magenta{
+	color: #6E005F !important;
+}
+
+.text-gray{
+	color: #97A2A2 !important;
+}
+
+.text-darkGray{
+	color:#535054 !important;
+}
+
+.text-red{
+	color: #B30000 !important;
+}
+
+.help-text {
+	color: #535054 !important;
+	margin-bottom: 0.5rem;
+}
+
+.text-black{
+	color:#000 !important;
+}
+
+/******** Hover Text color change *************/
+
+
+.hoverWhite:hover,
+.hoverWhite:focus {
+	color:#FFF !important;
+	cursor:pointer;
+}
+
+.hoverBeige:hover,
+.hoverBeige:focus {
+	color:#E8D0B5 !important;
+	cursor:pointer;
+}
+
+.hoverSand:hover,
+.hoverSand:focus {
+	color:#C89A58 !important;
+	cursor:pointer;
+}
+
+.hoverGray:hover,
+.hoverGray:focus {
+	color:#97A2A2 !important;
+	cursor:pointer;
+}
+
+.hoverDarkGray:hover,
+.hoverDarkGray:focus {
+	color:#535054 !important;
+	cursor:pointer;
+}
+
+.hoverDarkGreen:hover,
+.hoverDarkGreen:focus {
+	color:#18453B !important;
+	cursor:pointer;
+}
+
+/*********************************socials**********************************************************************/
+.social a {
+    padding: 6px;
+    text-align: center;
+    border-radius: 100px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+}
+
+.linkedin {
+    background: #0c8fd4;
+}
+
+.github {
+    background: #fff;
+}
+/********************************* Footer stuff taken from Cabs template **************************************/
+.pageFooter{
+	margin-top:1vh;
+
+}
+
+#footer-social {
+	padding: 0;
+	margin: 0;
+	min-height: 82px;
+
+}
+
+.footer__info {
+	display: inline-block;
+	margin-bottom: 1.25em
+}
+
+.footer__info__links {
+	margin: 0 0 6px;
+	line-height: 0.5;
+	padding: 0 0 8px;
+	border-bottom: 1px dotted grey
+}
+
+@media screen and (max-width: 722px) {
+	.footer__info__links {
+		line-height: 1.7
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.pageFooter{
+		padding-top: 10px;
+		padding-bottom:10px;
+	}
+	.footer__info__links {
+		line-height: 2.1;
+		text-align: center
+	}
+
+}
+
+.footer__info__links li {
+	display: inline-block;
+	font-size: 0.8rem
+}
+
+@media screen and (max-width: 640px) {
+	.footer__info__links li {
+		display: block
+	}
+}
+
+.footer__info__links li:first-child {
+	padding: 0
+}
+
+.footer__info__links li:last-child a {
+	border-right: none
+}
+
+.footer__info__links li a {
+	text-decoration: none;
+	padding-right: 8px;
+	margin-right: 4px;
+	color: #18453B;
+	border-right: 1px solid #FFF
+}
+
+@media screen and (max-width: 640px) {
+	.footer__info__links li a {
+		border-right: none;
+		padding: 4px 8px;
+		margin-right: 0
+	}
+}
+
+.footer__info__links li:hover {
+	text-decoration: underline
+}
+
+.footer__info__copyright, .footer__info__msu {
+	font-size: 0.6rem;
+	padding-top: 0;
+	height: 10px;
+	margin: 0 0 4px;
+	padding: 0;
+	color: #18453B
+}
+
+.footer__info__copyright li, .footer__info__msu li {
+	margin-bottom: 0;
+	line-height: 10px;
+	display: inline;
+	border-right: 1px solid #999;
+	padding: 0 8px 0 4px
+}
+
+.footer__info__copyright li:first-child, .footer__info__msu li:first-child {
+	padding-left: 0
+}
+
+.footer__info__copyright li:last-child, .footer__info__msu li:last-child {
+	border-right: 0
+}
+
+.footer__info__copyright li a, .footer__info__msu li a {
+	text-decoration: none;
+	color: #4c7e00
+}
+
+.footer__info__copyright li a:hover, .footer__info__msu li a:hover {
+	text-decoration: underline
+}
+
+.footer__info__copyright img.print-msuwordmark, .footer__info__msu img.print-msuwordmark {
+	display: none
+}
+
+@media screen and (max-width: 722px) {
+	.footer__info__copyright, .footer__info__msu {
+		height: auto
+	}
+}
+
+.footer__wordmark {
+	float: left !important;
+	width: 235px;
+	margin: 0 20px 10px 0
+}
+
+.footer__standard {
+	/*margin-top: 1em;*/
+	margin-left:auto;
+	margin-right:auto;
+	padding-left: 0.9375rem
+}
+
+
+
+@media screen and (max-width: 640px) {
+	.footer__standard {
+		margin-top: 1em
+	}
+
+	.footer__wordmark{
+		display:block;
+		float:none !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/**********************************TINYMCE ***************************/
+.tox .tox-editor-header{
+	z-index: 0 !important
+}
+
+/*************************************************** timepicker ****************************************************/
+.ui-datepicker{
+	/*z-index: 1000 !important;*/
+	border: 1px solid #535054;
+	border-radius: 5px;
+	padding:5px;
+	background-color: #97A2A2;
+	display:none;
+}
+.ui-timepicker-div { font-size: 90%; }
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 20px; margin-bottom: -20px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: inherit; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+.ui_tpicker_timezone{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_timezone_label{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_microsec{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_microsec_label{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_millisec{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_millisec_label{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_second{
+	visibility: hidden;
+	display:none;
+}
+.ui_tpicker_second_label{
+	visibility: hidden;
+	display:none;
+}
+.ui-datepicker-next{
+	visibility: hidden;
+	display:none;
+}
+.ui-datepicker-prev{
+	visibility: hidden;
+	display:none;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-table {
+    border: 0;
+  }
+
+  .responsive-table caption {
+    font-size: 1.3em;
+  }
+
+  .responsive-table tfoot {
+    display: none;
+  }
+
+  .responsive-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .responsive-table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  .responsive-table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+
+  .responsive-table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+  }
+
+  .responsive-table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*************************************** Carousel ************************************************************************************/
+/* Add basic styling for the carousel */
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*************************************** Screen Size Media Queries *******************************************************************/
+
+
+/**** These media queries are the screen size breakpoints of foundation ****/
+
+/*** If you need something to have an action at a foundation breakpoint
+that foundation doesn"t pointerle by default, put it here ***/
+
+/**** Small screens ***/
+@media only screen {
+
+	} /* Define mobile styles */
+
+/**** if screen is less than ~640px ***/
+@media only screen and (max-width: 40.063em) {
+
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+/**** Medium screens ***/
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+ }
+
+ @media only screen and (max-width: 64em) {
+ }
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+/**** Large screens ***/
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+	}
+
+@media only screen and (max-width: 64.063em) {
+}
+
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+
+	}
+
+/**** XLarge screens ***/
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+
+}
+
+@media only screen and (max-width: 90.063em) {
+}
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+	}
+
+/**** XXLarge screens ***/
+/* min-width 1921px, xxlarge screens */
+@media only screen and (min-width: 120.063em) {
+	}
+
+
+/**************************************** ACTUALLY SHOW THE PAGE ************************************/
+/********* THIS IS DONE TO AVOID FOUC *****************************/
+html{
+	display:block;
+}
